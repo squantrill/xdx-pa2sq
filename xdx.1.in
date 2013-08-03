@@ -1,0 +1,11 @@
+.\"
+.TH "XDX" "1" "Version @VERSION@" "Joop Stakenborg" "Hamradio"
+.SH "NAME"
+xdx \- tcp/ip DX-cluster client for Amateur Radio
+
+.SH "DESCRIPTION"
+\fBXdx\fR is a DX-cluster client which shows a list with DX announcements
+and a separate text widget with WWV, WCY, "To ALL" and other server messages.
+
+.SH "SEE ALSO"
+Select Help->Manual after starting xdx for a full manual.

@@ -1,0 +1,49 @@
+AC_PREREQ(2.53)
+AC_INIT(xdx, 2.4.2, pg4i@amsat.org)
+AM_INIT_AUTOMAKE
+AM_MAINTAINER_MODE
+
+AC_PROG_INSTALL
+AC_PROG_CC
+AC_LANG_C
+AC_CHECK_PROGS(RPMBUILD, rpmbuild, rpm)
+
+dnl Add the languages wich your application supports here.
+ALL_LINGUAS="de nl fr es pl pt"
+AM_GNU_GETTEXT([external])
+# autoheader templates for AM_GNU_GETTEXT checks.
+AH_TEMPLATE([ENABLE_NLS], [])
+AH_TEMPLATE([HAVE_CATGETS], [])
+AH_TEMPLATE([HAVE_GETTEXT], [])
+AH_TEMPLATE([HAVE_LC_MESSAGES], [])
+AH_TEMPLATE([HAVE_STPCPY], [])
+
+# Checks for header files.
+AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS([arpa/inet.h fcntl.h libintl.h netdb.h netinet/in.h string.h sys/socket.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+
+# Checks for library functions.
+AC_FUNC_FORK
+AC_TYPE_SIGNAL
+AC_FUNC_STAT
+AC_CHECK_FUNCS([tzset setlocale putenv alarm bzero gethostbyname inet_ntoa memset mkdir socket strerror])
+AC_FUNC_STRFTIME
+AC_STRUCT_TM
+
+if test "${ac_cv_c_compiler_gnu}" = "yes"; then
+  CFLAGS="${CFLAGS} -Wall"
+fi
+
+PKG_CHECK_MODULES(GTK, gtk+-2.0 >= 2.12.0)
+AC_SUBST(PACKAGE_CFLAGS)
+AC_SUBST(PACKAGE_LIBS)
+
+AC_OUTPUT([ po/Makefile.in \
+	xdx.1 \
+	xdx.spec
+	Makefile \
+	src/Makefile
+	])

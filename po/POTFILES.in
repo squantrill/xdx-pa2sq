@@ -1,0 +1,16 @@
+# List of source files containing translable strings.
+src/gui_aboutdialog.c
+src/gui.c
+src/gui_closedialog.c
+src/gui_manualdialog.c
+src/gui_opendialog.c
+src/gui_logdialog.c
+src/gui_settingsdialog.c
+src/history.c
+src/hyperlink.c
+src/main.c
+src/net.c
+src/preferences.c
+src/save.c
+src/text.c
+src/utils.c

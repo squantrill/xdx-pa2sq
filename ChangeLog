@@ -1,0 +1,102 @@
+Changelog for version xdx (2.4.2)
+  * German translations added.
+  * Improved gnuplot script for proper use of time format for the x-axis.
+  * Both contributions by Tom DL1JBE, Thanks!
+ 
+Changelog for version xdx (2.4.1)
+  * This fixes compilation against version 2.14 of GTK+. Thanks to Tom,
+    DL1JBE for notifying me.
+
+Changelog for version xdx (2.4)
+  * Added automatic country lookup by Emanuele IZ0ETE. In order for this to
+    work you need to enable the country column in the preferences dialog.
+  * With this release visible columns need to be reconfigured.
+  * Portuguese translation added. Thanks to David, CT1DRB.
+
+Changelog for version xdx (2.3)
+  * Compilation fixes for MAC OS X. Thanks to IZ0ETE.
+
+Changelog for version xdx (2.2)
+  * This fixes compilation issues due to a missing time.h include statement.
+
+Changelog for version xdx (2.1)
+  * French, Spanish and Polish translation updates.
+  * Allow zero length strings in the commands autologin entry. This will send
+    a plain return.
+  * Make sure we can fill in the callsign in the settings dialog.
+  * Use glib functions for calling external programs.
+  * CLX compatibility for auto-reconnect has been added.
+  
+Changelog for version xdx (2.0)
+  * Polish translations by Boguslaw Ciastek SQ5TB, thanks!
+  * A Dutch manual has been added.
+  * Updated gettext and automake version used.
+  * Install a .desktop file.
+  * Language files and manuals have been converted to UTF-8.
+  * The send widget is now a multiline text widget which allows entry of more
+    characters.
+  * Fonts used for DX messages (top window) and other messages (bottom window)
+    can now be changed through the preferences dialog.
+  * Linespacing added to the chat window, which makes it better readable.
+  * You can turn local echo off in the preferences dialog.
+  * The position of the divider between the chat and DX window is now saved.
+  * You can now use highlights in the chat window. Highlights will produce
+    colored text. Words to be highlighted can be set in the 'chat sidebar'.
+    When the checkbox next to the highlighted word is checked, xdx will search
+    for a highlight in all of the incoming text. When the checkbox is unchecked,
+    only the text after the prompt is searched.
+  * Checkboxes can be activated with ctrl-1 to ctrl-8. Entries can be focused
+    with alt-1 to alt-8.
+  * Alt-0 will switch focus to the send widget.
+  * Colors used for highlighting can be set in page 3 of the preferences dialog.
+  * The chat sidebar can be shown/hidden with F4.
+  * You can disable automatic scrolling of the chat window by clicking in the
+    window. Same for the DX window.
+  * Parse of the DX cluster output has been improved. Xdx would sporadically
+    miss DX messages.
+  * A new about dialog has been added.
+  * The manual now uses monospace font. It is activated with F1.
+  * Auto reconnect has been added. When activated through the settings menu,
+    xdx will try to reconnect when the connection is broken. This code is
+    somewhat experimental....
+  * To keep track of your connections a connection log is kept. It can be
+    viewed from the menu (Ctrl+l).
+  * Xdx can send a keepalive packet every 5 minutes, which is useful for
+    bad network connections. You must activate it in the settings dialog.
+  * Sound support has been added. When a highlight is active in the chat
+    window, a sound can be heard. You must use another program to play sound
+    and set it in the first page of the preferences dialog.
+  * Both ON4KST and DX-cluster prompts in the chat window are now colorized.
+    The callsign is bold.
+  * All of the colors in the chat window are now configurable.
+  * When wwv data is saved, files with "tab seperated values" will be saved
+    for every WWV host. See the MANUAL for the data format.
+
+Changelog for version xdx (1.2)
+
+  * Fixed compilation against GTK+ version 2.4.
+  * Added spanish translations and manual by Baltasar Perez, EB8AKF. Thanks!
+  * A new option added to the preferences dialog which allows showing/hiding
+    of columns in the spots window.
+
+Changelog for version xdx (1.1)
+  * Correctly save preferences and history when selecting program->exit from
+    the menu. This bug was reported by Wilbert Knol ZL2BSJ, thanks!
+  * Set the cursor after the entry when recalling history of the command line.
+
+Changelog for version xdx (1.0)
+
+  * A preferences dialog has been added.
+  * A URL in the chat window will now appear blue and underlined when your
+    mouse is over it. Clicking on it will open the link in your preferred
+    browser or mail program (see the preferences dialog).
+  * Fixed saving of position, size of the main window and columnwidths.
+  * Support for smileys (:) :-) :)) :-)) ;) ;-) :( :-( :(( :-(() 
+    in the chatwindow.
+  * Basic hamlib support. Double clicking on a dxspot will set your rig's
+    frequency. Needs the rigctl binary from the hamlib distribution.
+  * Autologin has been added. To use it, enter your callsign in the preferences
+    dialog. You can also add a comma separated list of commands here, which 
+    will be sent after login to the cluster.
+  * Dxspots, wcy/wwv information, toall and wx information can be saved to
+    independent files when activated from the preferences dialog.
